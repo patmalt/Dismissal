@@ -35,7 +35,9 @@ extension ViewController: DismissDelegate {
     }
 }
 
-extension ViewController {
+extension ViewController {}
+
+extension UIViewController {
     
     var topPresentedViewController: UIViewController {
         var current: UIViewController = self
