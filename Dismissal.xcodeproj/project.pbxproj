@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97060ADD1EFACA63005E07DB /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */; };
 		97250A261DFA327800F1EA9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97250A251DFA327800F1EA9D /* AppDelegate.swift */; };
 		97250A281DFA327800F1EA9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97250A271DFA327800F1EA9D /* ViewController.swift */; };
 		97250A2B1DFA327800F1EA9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97250A291DFA327800F1EA9D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		97250A221DFA327800F1EA9D /* Dismissal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dismissal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97250A251DFA327800F1EA9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97250A271DFA327800F1EA9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				97250A311DFA327800F1EA9D /* Info.plist */,
 				97250A371DFA334F00F1EA9D /* ModalViewController.swift */,
 				97250A381DFA334F00F1EA9D /* ModalViewController.xib */,
+				97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */,
 			);
 			path = Dismissal;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97060ADD1EFACA63005E07DB /* UIViewController+Additions.swift in Sources */,
 				97250A281DFA327800F1EA9D /* ViewController.swift in Sources */,
 				97250A391DFA334F00F1EA9D /* ModalViewController.swift in Sources */,
 				97250A261DFA327800F1EA9D /* AppDelegate.swift in Sources */,

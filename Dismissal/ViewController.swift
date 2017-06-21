@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DismissDelegate: class {
-    func dismissToRoot()
+    func dismissFromRoot()
 }
 
 class ViewController: UIViewController {
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: DismissDelegate {
-    func dismissToRoot() {
+    func dismissFromRoot() {
         if let presented = self.presentedViewController {
             let top = self.topPresentedViewController
             if top != presented {                
@@ -32,18 +32,5 @@ extension ViewController: DismissDelegate {
             }
         }
         self.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension ViewController {}
-
-extension UIViewController {
-    
-    var topPresentedViewController: UIViewController {
-        var current: UIViewController = self
-        while let presented = current.presentedViewController {
-            current = presented
-        }
-        return current
     }
 }

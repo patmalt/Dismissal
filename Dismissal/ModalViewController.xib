@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,27 +20,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aL5-QG-WhF">
-                    <rect key="frame" x="160" y="283" width="94" height="170"/>
+                    <rect key="frame" x="143" y="248" width="128" height="240"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJN-gT-A78">
-                            <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
                             <state key="normal" title="Present"/>
                             <connections>
                                 <action selector="presentWithSender:" destination="-1" eventType="touchUpInside" id="HKy-X3-RhT"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuw-o1-Zod">
-                            <rect key="frame" x="0.0" y="70" width="94" height="30"/>
+                            <rect key="frame" x="0.0" y="70" width="128" height="30"/>
                             <state key="normal" title="Dismiss Once"/>
                             <connections>
                                 <action selector="dismissOnceWithSender:" destination="-1" eventType="touchUpInside" id="eMM-IR-o6d"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9x-LU-UYT">
-                            <rect key="frame" x="0.0" y="140" width="94" height="30"/>
-                            <state key="normal" title="Dismiss All"/>
+                            <rect key="frame" x="0.0" y="140" width="128" height="30"/>
+                            <state key="normal" title="Dismiss From Root"/>
                             <connections>
-                                <action selector="dismissToRootWithSender:" destination="-1" eventType="touchUpInside" id="fS6-ad-uo3"/>
+                                <action selector="dismissFromRoot" destination="-1" eventType="touchUpInside" id="zti-HY-rca"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-Fh-Wu1">
+                            <rect key="frame" x="0.0" y="210" width="128" height="30"/>
+                            <state key="normal" title="Dismiss To Root"/>
+                            <connections>
+                                <action selector="dismissToRootWithSender:" destination="-1" eventType="touchUpInside" id="rbf-d6-eBM"/>
                             </connections>
                         </button>
                     </subviews>
