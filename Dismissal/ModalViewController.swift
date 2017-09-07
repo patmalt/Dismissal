@@ -1,10 +1,3 @@
-//
-//  ModalViewController.swift
-//  Dismissal
-//
-//  Created by Patrick Maltagliati on 12/8/16.
-//  Copyright © 2016 Patrick Maltagliati. All rights reserved.
-//
 
 import UIKit
 
@@ -15,7 +8,7 @@ class ModalViewController: UIViewController {
     init(color: UIColor, delegate: DismissDelegate?) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = color
+        view.backgroundColor = color
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,8 +16,8 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func present(sender: AnyObject) {
-        let viewController = ModalViewController(color: self.randonColor(), delegate: self.delegate)
-        self.present(viewController, animated: true, completion: nil)
+        let viewController = ModalViewController(color: randonColor(), delegate: delegate)
+        present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func dismissToRoot(sender: AnyObject) {
@@ -32,14 +25,14 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func dismissFromRoot() {
-        self.delegate?.dismissFromRoot()
+        delegate?.dismissFromRoot()
     }
     
     @IBAction func dismissOnce(sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
-    func randonColor() -> UIColor {
+    private func randonColor() -> UIColor {
         let colors: [UIColor] = [.black, .darkGray, .lightGray, .white, .gray, .green,
                                  .blue, .cyan, .yellow, .magenta, .orange, .purple, .brown]
         return colors[Int(arc4random_uniform(UInt32(colors.count)))]

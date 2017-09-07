@@ -1,10 +1,3 @@
-//
-//  UIViewController+Additions.swift
-//  Dismissal
-//
-//  Created by Patrick Maltagliati on 6/21/17.
-//  Copyright © 2017 Patrick Maltagliati. All rights reserved.
-//
 
 import UIKit
 
