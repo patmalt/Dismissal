@@ -22,15 +22,6 @@ class ViewController: UIViewController {
 
 extension ViewController: DismissDelegate {
     func dismissFromRoot() {
-        if let presented = self.presentedViewController {
-            let top = self.topPresentedViewController
-            if top != presented {                
-                if let snapshot = top.view.snapshotView(afterScreenUpdates: false) {
-                    snapshot.frame = presented.view.frame
-                    presented.view.addSubview(snapshot)
-                }
-            }
-        }
-        self.dismiss(animated: true, completion: nil)
+        dismissFromRootViewController(animated: true)
     }
 }

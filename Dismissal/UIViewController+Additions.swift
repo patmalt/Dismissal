@@ -10,19 +10,56 @@ import UIKit
 
 extension UIViewController {
     
-    var topPresentedViewController: UIViewController {
-        var current: UIViewController = self
-        while let presented = current.presentedViewController {
-            current = presented
+    var topPresentedViewController: UIViewController? {
+        guard var presentedViewController = self.presentedViewController else {
+            return nil
         }
-        return current
+        
+        while let nextPresentedViewController = presentedViewController.presentedViewController {
+            presentedViewController = nextPresentedViewController
+        }
+        return presentedViewController
     }
     
-    var rootPresentingViewController: UIViewController {
-        var current = self
-        while let presenting = current.presentingViewController {
-            current = presenting
+    func dismissFromRootViewController(animated: Bool, completion: (() -> ())? = nil) {
+        guard let presentedViewController = self.presentedViewController else {
+            return
         }
-        return current
+        
+        if animated,
+            let topPresentedViewController = self.topPresentedViewController,
+            presentedViewController != topPresentedViewController
+        {
+            if let snapshot = topPresentedViewController.view.snapshotView(afterScreenUpdates: false) {
+                snapshot.frame = presentedViewController.view.frame
+                presentedViewController.view.addSubview(snapshot)
+            }
+        }
+        
+        dismiss(animated: animated, completion: completion)
+    }
+    
+    var rootPresentingViewController: UIViewController? {
+        guard var presentingViewController = self.presentingViewController else {
+            return nil
+        }
+        
+        while let nextPresentingViewController = presentingViewController.presentingViewController {
+            presentingViewController = nextPresentingViewController
+        }
+        return presentingViewController
+    }
+    
+    func dismissToRootViewController(animated: Bool, completion: (() -> ())? = nil) {
+        if let rootPresentingViewController = self.rootPresentingViewController {
+            if animated,
+                let rootPresented = rootPresentingViewController.presentedViewController,
+                let snapshot = view.snapshotView(afterScreenUpdates: false)
+            {
+                snapshot.frame = rootPresented.view.frame
+                rootPresented.view.addSubview(snapshot)
+            }
+            rootPresentingViewController.dismiss(animated: animated, completion: completion)
+        }
     }
 }

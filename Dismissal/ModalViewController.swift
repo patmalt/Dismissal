@@ -28,18 +28,7 @@ class ModalViewController: UIViewController {
     }
     
     @IBAction func dismissToRoot(sender: AnyObject) {
-        if let presenting = self.presentingViewController {
-            let root = self.rootPresentingViewController
-            if presenting != root {
-                if let rootPresented = root.presentedViewController,
-                    let snapshot = self.view.snapshotView(afterScreenUpdates: false)
-                {
-                    snapshot.frame = rootPresented.view.frame
-                    rootPresented.view.addSubview(snapshot)
-                }
-            }
-            root.dismiss(animated: true, completion: nil)
-        }
+        dismissToRootViewController(animated: true)
     }
     
     @IBAction func dismissFromRoot() {
