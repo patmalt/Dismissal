@@ -45,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				97250A241DFA327800F1EA9D /* Dismissal */,
+				97CE2D881F60EF52006601BF /* Assets */,
 				97250A231DFA327800F1EA9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,16 +62,47 @@
 			isa = PBXGroup;
 			children = (
 				97250A251DFA327800F1EA9D /* AppDelegate.swift */,
-				97250A271DFA327800F1EA9D /* ViewController.swift */,
-				97250A291DFA327800F1EA9D /* Main.storyboard */,
-				97250A2C1DFA327800F1EA9D /* Assets.xcassets */,
-				97250A2E1DFA327800F1EA9D /* LaunchScreen.storyboard */,
-				97250A311DFA327800F1EA9D /* Info.plist */,
-				97250A371DFA334F00F1EA9D /* ModalViewController.swift */,
-				97250A381DFA334F00F1EA9D /* ModalViewController.xib */,
-				97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */,
+				97CE2D861F60EF27006601BF /* View Controllers */,
+				97CE2D871F60EF3D006601BF /* Extensions */,
+				97CE2D851F60EF06006601BF /* UI */,
 			);
 			path = Dismissal;
+			sourceTree = "<group>";
+		};
+		97CE2D851F60EF06006601BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				97250A381DFA334F00F1EA9D /* ModalViewController.xib */,
+				97250A291DFA327800F1EA9D /* Main.storyboard */,
+				97250A2E1DFA327800F1EA9D /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		97CE2D861F60EF27006601BF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97250A271DFA327800F1EA9D /* ViewController.swift */,
+				97250A371DFA334F00F1EA9D /* ModalViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		97CE2D871F60EF3D006601BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		97CE2D881F60EF52006601BF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				97250A311DFA327800F1EA9D /* Info.plist */,
+				97250A2C1DFA327800F1EA9D /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
