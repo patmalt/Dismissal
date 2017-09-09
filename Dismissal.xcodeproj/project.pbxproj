@@ -15,6 +15,7 @@
 		97250A301DFA327800F1EA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97250A2E1DFA327800F1EA9D /* LaunchScreen.storyboard */; };
 		97250A391DFA334F00F1EA9D /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97250A371DFA334F00F1EA9D /* ModalViewController.swift */; };
 		97250A3A1DFA334F00F1EA9D /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97250A381DFA334F00F1EA9D /* ModalViewController.xib */; };
+		972F759A1F644ECB0018B5BD /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F75991F644ECB0018B5BD /* CardViewControllerAnimatedTransitioning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		97250A2F1DFA327800F1EA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97250A371DFA334F00F1EA9D /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		97250A381DFA334F00F1EA9D /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		972F75991F644ECB0018B5BD /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		977852FB1F60F07E00A84047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/patmalt/Dev/Dismissal/Dismissal/Assets/Info.plist; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				97250A251DFA327800F1EA9D /* AppDelegate.swift */,
-				97CE2D861F60EF27006601BF /* View Controllers */,
-				97CE2D871F60EF3D006601BF /* Extensions */,
+				97250A271DFA327800F1EA9D /* ViewController.swift */,
+				97250A371DFA334F00F1EA9D /* ModalViewController.swift */,
+				97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */,
+				972F75991F644ECB0018B5BD /* CardViewControllerAnimatedTransitioning.swift */,
 				97CE2D851F60EF06006601BF /* UI */,
 				977852FC1F60F08B00A84047 /* Assets */,
 			);
@@ -86,23 +90,6 @@
 				97250A2E1DFA327800F1EA9D /* LaunchScreen.storyboard */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		97CE2D861F60EF27006601BF /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				97250A271DFA327800F1EA9D /* ViewController.swift */,
-				97250A371DFA334F00F1EA9D /* ModalViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		97CE2D871F60EF3D006601BF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				97060ADC1EFACA63005E07DB /* UIViewController+Additions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +168,7 @@
 			files = (
 				97060ADD1EFACA63005E07DB /* UIViewController+Additions.swift in Sources */,
 				97250A281DFA327800F1EA9D /* ViewController.swift in Sources */,
+				972F759A1F644ECB0018B5BD /* CardViewControllerAnimatedTransitioning.swift in Sources */,
 				97250A391DFA334F00F1EA9D /* ModalViewController.swift in Sources */,
 				97250A261DFA327800F1EA9D /* AppDelegate.swift in Sources */,
 			);
