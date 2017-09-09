@@ -30,6 +30,10 @@ extension ViewController: DismissDelegate {
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return CardPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CardViewControllerAnimatedTransitioning.present()
     }
