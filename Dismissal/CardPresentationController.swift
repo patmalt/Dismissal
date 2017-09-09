@@ -6,7 +6,10 @@ class CardPresentationController: UIPresentationController {
     
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
-        presentedView?.frame = frameOfPresentedViewInContainerView
+        if let presentedView = presentedView {
+            presentedView.frame = frameOfPresentedViewInContainerView
+            presentedView.layer.cornerRadius = 10
+        }
     }
     
     override func size(forChildContentContainer container: UIContentContainer,
